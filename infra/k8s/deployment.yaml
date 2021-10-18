@@ -16,18 +16,18 @@ spec:
     spec:
       containers:
       - name: blog
-        image: ghost:2.6-alpine
+        image: ghost:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 2368
         env:
         - name: url
-          value: http://smerc.net
+          value: http://blog.smerc.io
         volumeMounts:
         - mountPath: /var/lib/ghost/content
-          name: content
+          name: content2
       volumes:
-      - name: content
+      - name: content2
         persistentVolumeClaim:
-          claimName: blog-content
+          claimName: blog-content2
 
