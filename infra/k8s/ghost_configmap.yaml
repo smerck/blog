@@ -1,0 +1,44 @@
+apiVersion: v1
+data:
+  config.production.json: |
+    {
+      "url": "http://localhost:2368",
+      "server": {
+        "port": 2368,
+        "host": "0.0.0.0"
+      },
+      "database": {
+                "client": "mysql",
+                    "connection": {
+                    "host": "mysql.db.svc.cluster.local",
+                    "user": "ghost",
+                    "password": "changeme",
+                    "database": "ghost",
+                    "charset": "utf8"
+    }
+      },
+            "storage": {
+        "active": "ghost-storage-azure",
+        "ghost-storage-azure": {
+          "container": "blog",
+          "cdnUrl": "cdn.adamhancock.co.uk",
+          "useHttps": "true"
+        }
+      },
+      "mail": {
+        "transport": "Direct"
+      },
+      "logging": {
+        "transports": [
+          "file",
+          "stdout"
+        ]
+      },
+      "process": "systemd",
+      "paths": {
+        "contentPath": "/var/lib/ghost/content"
+      }
+    }
+kind: ConfigMap
+metadata:
+  name: ghostconfig
