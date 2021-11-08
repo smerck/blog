@@ -1,4 +1,4 @@
-baseurl = "https://blog.smerc.io/"
+baseurl = "http://blog.smerc.io/"
 languageCode = "en-us"
 theme = "terminal"
 paginate = 5
@@ -12,10 +12,11 @@ paginate = 5
 
 [languages]
   [languages.en]
+    baseurl = "http://blog.smerc.io/"
     languageName = "English"
-    title = "Terminal"
-    subtitle = "A simple, retro theme for Hugo"
-    owner = ""
+    title = "wow such blog"
+    subtitle = "blogs for dayz amirite"
+    owner = "@SmercatoRex"
     keywords = ""
     copyright = ""
     menuMore = "Show more"
@@ -27,15 +28,18 @@ paginate = 5
     missingBackButtonLabel = "Back to home page"
 
     [languages.en.params.logo]
+      baseurl = "http://blog.smerc.io/"
       logoText = "Terminal"
       logoHomeLink = "/"
 
     [languages.en.menu]
       [[languages.en.menu.main]]
+        baseurl = "http://blog.smerc.io/"
         identifier = "about"
         name = "About"
         url = "/about"
       [[languages.en.menu.main]]
+        baseurl = "http://blog.smerc.io/"
         identifier = "showcase"
         name = "Showcase"
         url = "/showcase"

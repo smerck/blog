@@ -1,4 +1,7 @@
-variable "do_cluster_name" {}
+variable "do_cluster_name" {
+  type = string
+  default = "smerc-dev"
+}
 
 resource "digitalocean_kubernetes_cluster" "smerc_dev" {
     name = "${var.do_cluster_name}"

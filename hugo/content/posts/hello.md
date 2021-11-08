@@ -1,5 +1,5 @@
 +++
-title = "Hello Friend"
+title = "omg this is the first post"
 date = "2019-01-25"
 author = "Lorem Ipsum"
 cover = "hello.jpg"

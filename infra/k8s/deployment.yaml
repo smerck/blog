@@ -16,19 +16,9 @@ spec:
     spec:
       containers:
       - name: blog
-        image: ghost:latest
+        image: registry.digitalocean.com/smerc-dev/hugo:v0.10
         imagePullPolicy: Always
         ports:
-        - containerPort: 2368
-        env:
-        - name: url
-          value: http://blog.smerc.io
-        volumeMounts:
-        - mountPath: /var/lib/ghost/content
-          name: content2
-      volumes:
-      - name: content2
-        persistentVolumeClaim:
-          claimName: blog-content2
+        - containerPort: 1313
 
 
