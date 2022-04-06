@@ -3,6 +3,7 @@ theme = "terminal"
 paginate = 5
 
 [params]
+  baseUrl = ""
   contentTypeName = "posts"
   themeColor = "orange"
   showMenuItems = 2
