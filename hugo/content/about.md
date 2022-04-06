@@ -1,7 +1,7 @@
 +++
 title = "About"
 draft = false
-description = "lol kthx"
+description = "who is smerc?"
 +++
 
-lol this is the content though
+I'm just a dude man!
