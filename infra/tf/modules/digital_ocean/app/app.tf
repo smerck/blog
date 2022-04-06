@@ -1,4 +1,4 @@
-resource "digitalocean_app" "blog_app" {
+resource "digitalocean_app" "app" {
   spec {
     name   = "${var.name}"
     region = "${var.region}"
@@ -7,7 +7,7 @@ resource "digitalocean_app" "blog_app" {
       name               = "${var.name}"
       instance_count     = 1
       instance_size_slug = "basic-xxs"
-      dockerfile_path = "Dockerfile"
+      dockerfile_path = "../../Dockerfile"
       http_port = 1313
 
       routes {
@@ -20,6 +20,10 @@ resource "digitalocean_app" "blog_app" {
       }
       health_check {
         http_path = "/"
+      }
+      cors {
+        allow_origins = "*"
+        allow_headers = "*"
       }
     }
   }
