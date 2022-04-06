@@ -3,12 +3,13 @@ theme = "terminal"
 paginate = 5
 
 [params]
-  baseUrl = "https://blog-2dffb.ondigitalocean.app/"
+  baseUrl = "/"
   contentTypeName = "posts"
   themeColor = "orange"
   showMenuItems = 2
   fullWidthTheme = false
   centerTheme = false
+  relativeURLs = true
 
 [languages]
   [languages.en]
