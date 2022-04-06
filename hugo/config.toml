@@ -3,12 +3,13 @@ theme = "terminal"
 paginate = 5
 
 [params]
-  baseUrl = "/"
+  baseUrl = ""
   contentTypeName = "posts"
   themeColor = "orange"
   showMenuItems = 2
   fullWidthTheme = false
   centerTheme = false
+  relativeUrls = true
 
 
 
