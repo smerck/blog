@@ -1,4 +1,3 @@
-baseurl = "http://blog.smerc.io/"
 languageCode = "en-us"
 theme = "terminal"
 paginate = 5
@@ -12,10 +11,9 @@ paginate = 5
 
 [languages]
   [languages.en]
-    baseurl = "http://blog.smerc.io/"
     languageName = "English"
-    title = "wow such blog"
-    subtitle = "blogs for dayz amirite"
+    title = "Overengineered"
+    subtitle = "Way too much effort for fun & profit"
     owner = "@SmercatoRex"
     keywords = ""
     copyright = ""
@@ -28,18 +26,16 @@ paginate = 5
     missingBackButtonLabel = "Back to home page"
 
     [languages.en.params.logo]
-      baseurl = "http://blog.smerc.io/"
-      logoText = "Terminal"
+      logoText = "Overengineered"
       logoHomeLink = "/"
 
     [languages.en.menu]
       [[languages.en.menu.main]]
-        baseurl = "http://blog.smerc.io/"
         identifier = "about"
         name = "About"
         url = "/about"
+
       [[languages.en.menu.main]]
-        baseurl = "http://blog.smerc.io/"
         identifier = "showcase"
         name = "Showcase"
         url = "/showcase"
