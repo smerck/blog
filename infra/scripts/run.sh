@@ -1,8 +1,5 @@
 #!/bin/sh
 
-CONFIG=""
-
-
 CONFIG="config.toml"
 hugo server \
   --bind=0.0.0.0 \
