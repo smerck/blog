@@ -6,6 +6,6 @@ CONFIG="config.toml"
   --bind=0.0.0.0 \
   --disableFastRender \
   --config=$CONFIG \
-  --baseUrl=https://ondigitalocean.app \
+  --baseUrl=https://smerc-blog-etivz.ondigitalocean.app \
   --appendPort=false \
   --debug
