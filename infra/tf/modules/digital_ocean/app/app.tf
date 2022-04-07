@@ -1,4 +1,4 @@
-resource "digitalocean_app" "blog_app" {
+resource "digitalocean_app" "app" {
   spec {
     name   = "${var.name}"
     region = "${var.region}"
@@ -13,14 +13,23 @@ resource "digitalocean_app" "blog_app" {
       routes {
         path = "/"
       }
+
       github {
-        repo = "smerck/relearning-golang"
+        repo = "smerck/blog"
         branch = "${var.branch}"
         deploy_on_push = true
       }
+
       health_check {
         http_path = "/"
       }
+
+      cors {
+        allow_origins {
+          regex = ".*"
+        }
+      }
+      source_dir = "/"
     }
   }
 }
