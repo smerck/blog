@@ -9,9 +9,9 @@ RUN echo "$HUGO_URL"
 RUN echo "$HUGO_VERSION"
 
 RUN apk add --update wget
-RUN wget --quiet $HUGO_URL && \
-    tar xzf hugo_$HUGO_VERSION_Linux-64bit.tar.gz -C /usr/bin && \
-    rm -r hugo_$HUGO_VERSION_Linux-64bit.tar.gz
+RUN wget --quiet "$HUGO_URL" && \
+    tar xzf "hugo_$HUGO_VERSION_Linux-64bit.tar.gz" -C /usr/bin && \
+    rm -r "hugo_$HUGO_VERSION_Linux-64bit.tar.gz"
 
 COPY ./hugo /site
 COPY ./infra/scripts/run.sh /run.sh
