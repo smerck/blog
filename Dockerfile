@@ -1,7 +1,7 @@
 FROM amd64/alpine:latest
 
 ENV PATH=$PATH:/usr/bin
-ARG HUGO_VERSION="0.96.0"
+ARG HUGO_VERSION=0.96.0
 ARG HUGO_THEME=terminal
 ARG HUGO_URL="https://github.com/gohugoio/hugo/releases/download/v$HUGO_VERSION/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz"
 
