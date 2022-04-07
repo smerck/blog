@@ -2,14 +2,6 @@ module "blog_prod" {
   source = "./modules/digital_ocean/app"
 
   region = "nyc1"
-  name = "blog"
+  name = "smerc-blog"
   branch = "main"
-}
-
-module "blog_dev" {
-  source = "./modules/digital_ocean/app"
-
-  region = "nyc1"
-  name = "blog"
-  branch = "dev"
 }
