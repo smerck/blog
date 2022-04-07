@@ -1,5 +1,6 @@
 FROM amd64/alpine:latest
 
+ENV PATH=/usr/bin
 ARG HUGO_VERSION="0.96.0"
 ARG HUGO_THEME="terminal"
 
