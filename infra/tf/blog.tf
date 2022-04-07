@@ -5,3 +5,11 @@ module "blog_prod" {
   name = "blog"
   branch = "main"
 }
+
+module "blog_dev" {
+  source = "./modules/digital_ocean/app"
+
+  region = "nyc1"
+  name = "blog"
+  branch = "dev"
+}
