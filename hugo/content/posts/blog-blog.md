@@ -21,7 +21,7 @@ Having never really built a blog before, i started with some basic research on b
 
 image -- hugo
 
-Hugo is fast, simple, and easy to use. I have some confidence that given it's simplicity, I can run this as a stateless service across a number of platforms for demonstration purposes without expending too much effort to just standup a service. 
+Hugo is fast, simple, and easy to use. I have some confidence that given it's simplicity, I can run this as a stateless service across a number of platforms for demonstration purposes without expending too much effort to just standup a service.
 
 Further Reading:
 - Hugo documentation
@@ -35,17 +35,17 @@ Further Reading:
 
 # Platform - Digital Ocean Apps
 
-Initially, I tried running this on a Digital Ocean Kubernetes cluster, but that was too expensive for the purposes of a simple blog like this. For the time being, i've resorted to running this as a Digital Ocean app, but will likely select different platforms for personal learning and content generation purposes. 
+Initially, I tried running this on a Digital Ocean Kubernetes cluster, but that was too expensive for the purposes of a simple blog like this. For the time being, i've resorted to running this as a Digital Ocean app, but will likely select different platforms for personal learning and content generation purposes.
 
-Adding a Digital Ocean App is pretty straightforward. You can either publish a static site or a containerized app directly through this without having to go through the complexity of kubernetes, and at a lower cost. While I wouldn't be willing to give up this level of control & visibility into a production application, for the purposes of a personal blog, this works great! Additionally, the cost of the blog is significantly lower when run as an app versus running on Digital Ocean managed kubernetes cluster. After running the blog on kubernetes and as a DO App, I can do some quick comparison between costs. 
+Adding a Digital Ocean App is pretty straightforward. You can either publish a static site or a containerized app directly through this without having to go through the complexity of kubernetes, and at a lower cost. While I wouldn't be willing to give up this level of control & visibility into a production application, for the purposes of a personal blog, this works great! Additionally, the cost of the blog is significantly lower when run as an app versus running on Digital Ocean managed kubernetes cluster. After running the blog on kubernetes and as a DO App, I can do some quick comparison between costs.
 
-Pros: 
+Pros:
 - DO Apps are siginficantly cheaper than a managed k8s cluster for this purpose.
 - DO Apps are significant simpler and easier to setup than Kubernetes.
-- This is a personal blog and high availability/control/visibility is not my current concern. 
-- Integrates with source control (Github) and automatically updates when a change is pushed to main. 
+- This is a personal blog and high availability/control/visibility is not my current concern.
+- Integrates with source control (Github) and automatically updates when a change is pushed to main.
 
-Cons: 
+Cons:
 - Less control & visibility over the application.
 
 Further reading:
@@ -54,23 +54,22 @@ Further reading:
 
 ## Adding hugo to DO Apps
 
-Digital Ocean has documentation around adding adding hugo to Digital Ocean Apps either through a Dockerfile or a Cloud Native Buildpack. I've composed my hugo server as a dockerfile in this case. 
+Digital Ocean has documentation around adding adding hugo to Digital Ocean Apps either through a Dockerfile or a Cloud Native Buildpack. I've composed my hugo server as a dockerfile in this case.
 
 Further Reading:
 - Hugo on Digital Ocean apps: https://docs.digitalocean.com/products/app-platform/languages-frameworks/hugo/
 
 # Infrastructure - DO Apps, Docker, Terraform
 
-While I've opted to deploy this on Digital Ocean Apps, I will be doing so with terraform to enforce an Infrastructure-As-Code standard on how this blog is updated & deployed. Infrasture-As-Code is a principal I strongly believe in when implemented correctly, and I aim to do this with my work for demonstration and learning purposes. For this reason, i'm running this blog as a DO App (for reasons described above). We'll have immutable infrastructure by defining my app as a container, and will have a good control over the app and it's associated configurations by defining them in terraform. While i'm currently using DO Apps for hosting/deploying the blog, I will consider updating this for use on other platforms and/or services (e.g. EKS, Fargate, local k8s) in the future, and packaging this server as a container should make this an easier proposition in the future.  
+While I've opted to deploy this on Digital Ocean Apps, I will be doing so with terraform to enforce an Infrastructure-As-Code standard on how this blog is updated & deployed. Infrasture-As-Code is a principal I strongly believe in when implemented correctly, and I aim to do this with my work for demonstration and learning purposes. For this reason, i'm running this blog as a DO App (for reasons described above). We'll have immutable infrastructure by defining my app as a container, and will have a good control over the app and it's associated configurations by defining them in terraform. While i'm currently using DO Apps for hosting/deploying the blog, I will consider updating this for use on other platforms and/or services (e.g. EKS, Fargate, local k8s) in the future, and packaging this server as a container should make this an easier proposition in the future.
 
-## Why Terraform? 
+## Why Terraform?
 
-Terraform is reasonably ubiquitous and agnostic to different infrastructure platforms. Luckily, digital ocean has a good terraform provider that I can use for publishing this, but when i expect to deploy this application on other platforms, I have faith that the terraform community is generally supporting some of the most common/popular platforms. The other primary IaC options out there seem to be CloudFormation (aws-only), Crossplane (Kubernetes-only), and Pulumi. While these other solutions are interesting and certainly worth exploration at a future date, I'm planning to use terraform for the time being given it's wide community support and platform agnosticism. 
+Terraform is reasonably ubiquitous and agnostic to different infrastructure platforms. Luckily, digital ocean has a good terraform provider that I can use for publishing this, but when i expect to deploy this application on other platforms, I have faith that the terraform community is generally supporting some of the most common/popular platforms. The other primary IaC options out there seem to be CloudFormation (aws-only), Crossplane (Kubernetes-only), and Pulumi. While these other solutions are interesting and certainly worth exploration at a future date, I'm planning to use terraform for the time being given it's wide community support and platform agnosticism. This also gives me a good basis for defining other pieces of the infrastructure that may be needed for hosting the blog such as DNS records, load balancers, or other services in the future. I'll plan to define some terraform modules for these different deployment scenarios and leverage terraform cloud as the backend for the terraform state & locking.
 
 Further reading:
 - Crossplane vs Terraform vs Cloudformation vs Pulumi
 
 # Alltogether now
 
-In summary, I've created a DO app that is deployed anytime the main branch of my repo is updated. While my blog's repo is public, I've limited write access to myself. Since my app is hosted on Github with a Dockerfile in the root directory, Digital Ocean detects this and ultimately uses the dockerfile for creating my application. You may run into some CORS issues when attempting to do this, depending on your hugo configuration. 
-
+In summary, I've created a DO app that is deployed anytime the main branch of my repo is updated. While my blog's repo is public, I've limited write access to myself. Since my app is hosted on Github with a Dockerfile in the root directory, Digital Ocean detects this and ultimately uses the dockerfile for creating my application. You may run into some CORS issues when attempting to do this, depending on your hugo configuration. In my repo, i've created a basic make target for running the dev server for validation purposes, so that you can
