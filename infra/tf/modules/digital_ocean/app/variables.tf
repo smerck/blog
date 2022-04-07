@@ -9,3 +9,7 @@ variable "branch" {
 variable "region" {
     type = string
 }
+
+variable "hostname" {
+    type = string
+}

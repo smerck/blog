@@ -1,7 +1,8 @@
 module "blog_prod" {
   source = "./modules/digital_ocean/app"
 
-  region = "nyc1"
+  region = "nyc"
   name = "smerc-blog"
   branch = "main"
+  hostname = "blog.smerc.io"
 }
