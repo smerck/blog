@@ -8,7 +8,7 @@ dev-server:
 	cd hugo; hugo server -D --config config.dev.toml
 
 tf-init:
-	cd $(TF_DIR) && terraform init
+	cd $(TF_DIR) && terraform init -input=false
 
 plan: tf-init
 	cd $(TF_DIR) && terraform plan
