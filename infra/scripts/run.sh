@@ -6,4 +6,5 @@ CONFIG="config.toml"
   --bind=0.0.0.0 \
   --disableFastRender \
   --config=$CONFIG \
-  --baseUrl=https://smerc-blog-xosni.ondigitalocean.app/
+  --baseUrl=https://smerc-blog-xosni.ondigitalocean.app \
+  --debug

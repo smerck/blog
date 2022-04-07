@@ -3,13 +3,12 @@ theme = "terminal"
 paginate = 5
 
 [params]
+  baseUrl = "https://smerc-blog-xosni.ondigitalocean.app"
   contentTypeName = "posts"
   themeColor = "orange"
   showMenuItems = 2
   fullWidthTheme = false
   centerTheme = false
-
-
 
 [languages]
   [languages.en]
