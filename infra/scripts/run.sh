@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 CONFIG="config.toml"
 /usr/bin/hugo server \
