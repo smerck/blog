@@ -1,6 +1,6 @@
 FROM amd64/alpine:latest
 
-ARG HUGO_VERSION="0.89.1"
+ARG HUGO_VERSION="0.96.0"
 ARG HUGO_THEME="terminal"
 
 RUN apk add --update wget
