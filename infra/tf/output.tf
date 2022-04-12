@@ -1,4 +1,4 @@
-output "blgo_do_url" {
+output "blog_do_url" {
   value = module.blog_dev.do_url
 }
 
