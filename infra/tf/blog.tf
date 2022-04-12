@@ -1,8 +1,9 @@
-module "blog_prod" {
+module "blog_dev" {
   source = "./modules/digital_ocean/app"
 
-  region = "nyc"
-  name = "smerc-blog"
-  branch = "main"
-  hostname = "blog.smerc.io"
+  region      = "nyc"
+  name        = "smerc-dev-blog"
+  branch      = "main"
+  apex_domain = "smerc.dev"
+
 }

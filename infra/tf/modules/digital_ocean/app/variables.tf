@@ -1,15 +1,15 @@
 variable "name" {
-    type = string
+  type = string
 }
 
 variable "branch" {
-    type = string
+  type = string
 }
 
 variable "region" {
-    type = string
+  type = string
 }
 
-variable "hostname" {
-    type = string
+variable "apex_domain" {
+  type = string
 }
