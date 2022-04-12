@@ -1,20 +1,20 @@
 resource "digitalocean_app" "app" {
   spec {
-    name   = "${var.name}"
-    region = "${var.region}"
+    name   = var.name
+    region = var.region
 
     domain {
-      name = "${var.hostname}"
+      name = var.apex_domain
       type = "PRIMARY"
-      zone = "smerc.io"
+      zone = var.apex_domain
     }
 
     service {
-      name               = "${var.name}"
+      name               = var.name
       instance_count     = 1
       instance_size_slug = "basic-xxs"
-      dockerfile_path = "Dockerfile"
-      http_port = 1313
+      dockerfile_path    = "Dockerfile"
+      http_port          = 1313
 
 
       routes {
@@ -22,8 +22,8 @@ resource "digitalocean_app" "app" {
       }
 
       github {
-        repo = "smerck/blog"
-        branch = "${var.branch}"
+        repo           = "smerck/blog"
+        branch         = var.branch
         deploy_on_push = true
       }
 
