@@ -1,9 +1,18 @@
-name: GitHub Actions Demo
+name: terraform validation
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  explore-terraform-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - uses: hashicorp/setup-terraform@v1
+      - run: terraform init
+      - id: plan
+        run: terraform plan -no-color
+
+      - run: echo ${{ steps.plan.outputs.stdout }}
+      - run: echo ${{ steps.plan.outputs.stderr }}
+      - run: echo ${{ steps.plan.outputs.exitcode }}
+      - run:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
