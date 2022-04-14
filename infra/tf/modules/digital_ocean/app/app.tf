@@ -7,6 +7,7 @@ resource "digitalocean_app" "app" {
       name = var.apex_domain
       type = "PRIMARY"
       zone = var.apex_domain
+      wildcard = true
     }
 
     service {
