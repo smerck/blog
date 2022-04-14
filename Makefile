@@ -5,7 +5,7 @@ build:
 	docker build . --tag hugo-server
 
 dev-server:
-	cd hugo; hugo server -D --config config.dev.toml
+	cd hugo; hugo server -D --config content/_default/config.toml
 
 tf-init:
 	@cd $(TF_DIR) && terraform init -input=false
