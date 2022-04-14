@@ -1,6 +1,10 @@
 name: 'Terraform'
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
 
 env:
   TF_LOG: INFO
@@ -10,7 +14,6 @@ jobs:
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
-
     # Set the working directory to main for the config files
     defaults:
       run:
@@ -18,7 +21,7 @@ jobs:
         working-directory: ./infra/tf
 
 
-steps:
+    steps:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v2
@@ -73,3 +76,6 @@ steps:
             repo: context.repo.repo,
             body: output
           })
+    - name: Terraform Plan Status
+      if: steps.plan.outcome == 'failure'
+      run: exit 1
