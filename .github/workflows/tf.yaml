@@ -37,7 +37,7 @@ jobs:
     - name: Terraform Init
       id: init
       env:
-        TF_VAR_DO_TOKEN: ${{ sercrets.DO_PAT }}
+        TF_VAR_DO_TOKEN: ${{ secrets.DO_PAT }}
       run: terraform init
     - name: Terraform Validate
       id: validate
