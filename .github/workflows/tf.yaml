@@ -11,6 +11,24 @@ env:
 
 
 jobs:
+  hugo:
+    name: 'hugo'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./hugo
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.91.2'
+          # extended: true
+      - name: hugo build
+        run: hugo --minify
+
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
@@ -19,11 +37,9 @@ jobs:
       run:
         shell: bash
         working-directory: ./infra/tf
-
-
     steps:
     # Checkout the repository to the GitHub Actions runner
-    - name: Checkout
+    - name: checkout
       uses: actions/checkout@v2
 
     # Install the preferred version of Terraform CLI
