@@ -1,3 +1,4 @@
-[submodule "hugo/themes/terminal"]
-	path = hugo/themes/terminal
-	url = https://github.com/panr/hugo-theme-terminal
+[submodule "hugo/themes/congo"]
+	path = hugo/themes/congo
+	url = https://github.com/jpanther/congo.git
+	branch = stable

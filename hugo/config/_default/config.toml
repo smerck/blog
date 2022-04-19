@@ -1,0 +1,12 @@
+# Using the provided exampleSite configuration from the congo theme
+
+baseUrl = "https://smerc.dev"
+theme = "congo"
+defaultContentLanguage = "en"
+
+enableRobotsTXT = true
+paginate = 15
+summaryLength = 0
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

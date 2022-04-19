@@ -1,0 +1,22 @@
+languageCode = "en-au"
+languageName = "English"
+displayName = ":flag-en:"
+isoCode = "en"
+weight = 1
+rtl = false
+
+title = "The Ogrengineered Blog"
+# logo = "img/logo.jpg"
+description = "A blog featuring the ramblings of an engineer"
+copyright = "&copy; 2022 smerc"
+
+dateFormat = "2 January 2006"
+
+[author]
+  name = "smerc"
+  image = "img/smerc.jpg"
+  headline = "smerc is the bestest!"
+  bio = "This is an example author bio, and although there's a stock photo of a dog here, this article was actually created by a human. :dog:"
+  links = [
+    { twitter = "https://twitter.com/smercatoRex" },
+  ]
