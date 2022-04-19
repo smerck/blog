@@ -5,7 +5,7 @@ isoCode = "en"
 weight = 1
 rtl = false
 
-title = "smerc.dev"
+title = "The Ogrengineered Blog"
 # logo = "img/logo.jpg"
 description = "A blog featuring the ramblings of an engineer"
 copyright = "&copy; 2022 smerc"

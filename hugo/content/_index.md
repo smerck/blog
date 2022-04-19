@@ -1,5 +1,5 @@
 ---
-title: "smerc.dev"
+title: "An ogrengineered blog"
 description: "The mad rambling of an engineer"
 ---
 
@@ -7,23 +7,10 @@ description: "The mad rambling of an engineer"
 The mad ramblings of an engineer
 {{< /lead >}}
 
-This is a demo site built entirely using Congo. It also contains a complete set of [theme documentation]({{< ref "docs" >}}). Congo is flexible and is great for both static page-based content (like this demo) or a traditional blog with a feed of recent posts.
+This is a website dedicated to brain dumps, understanding technical concepts, and writings about my own personal projects. You can either check out my github or read posts about some of my latest articles below. For more details on how this blog is put together, refer to the [first blog post]({{< ref "posts" >}}).
 
-<div class="flex px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
-  <span class="flex items-center ltr:pr-3 rtl:pl-3 text-primary-400">
-    {{< icon "triangle-exclamation" >}}
-  </span>
-  <span class="flex items-center justify-between grow dark:text-neutral-300">
-    <span class="prose dark:prose-invert">This is a demo of the <code id="layout">page</code> layout.</span>
-    <button
-      id="switch-layout-button"
-      class="px-4 !text-neutral !no-underline rounded-md bg-primary-600 hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700"
-    >
-      Switch layout &orarr;
-    </button>
-  </span>
-</div>
+# Why Ogrengineered? What is Ogrengineering?
 
-Explore the [sample pages]({{< ref "samples" >}}) to get a feel for what Congo can do. If you like what you see, check out the project on [Github](https://github.com/jpanther/congo) or read the [Installation guide]({{< ref "docs/installation" >}}) to get started.
+For a long time, I've wanted a place to both detail my personal work and serve as a place for me to explore new technologies I'm less familiar. A number of discussions about this in the past resulted in a coversation with a colleague that ended with "Why would you do X? Couldn't you just do Y from Z provider to make this easier? Often, the answer is yes, but this space is more about me learning particular topics i'm less familiar with and talking about findings from recent projects i've been involved in. To that end, the posts on this blog will be less oriented around the "easiest" way to do this, and more about exploring what can be done. To that end, solutions here often end up "overengineered" compared to what's technically necessary, but I generally like to build something and bang on it like a dumb ogre before I feel confident that I have an understanding of what it is or how it works, which i've taken to calling Ogrengineering.
 
-![A stylised photograph of a purple squid on a pink backdrop.](squid.jpg "Photo by [Jippe Joosten](https://unsplash.com/@jippe_joosten?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/vibrant-purple?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).")
+I'll often use the code for the blog for demonstration/deployment purposes, and intended to deploy the blog across many platforms. While this is completely unnecessary, it's more for learning/improving than doing what is "necessary". Ogrengineering a brighter future begins here!
