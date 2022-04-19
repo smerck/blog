@@ -1,5 +1,5 @@
 ---
-title: "The Ogreengineered Blog"
+title: "The Ogrengineered Blog"
 description: "An engineer with the heart of an ogre"
 ---
 
