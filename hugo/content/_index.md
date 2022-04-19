@@ -1,6 +1,6 @@
 ---
-title: "An ogrengineered blog"
-description: "an engineer with the heart of an ogre"
+title: "The Ogreengineered Blog"
+description: "An engineer with the heart of an ogre"
 ---
 
 This is a website dedicated to brain dumps, understanding technical concepts, and writings about my own personal projects. You can either check out my github or read posts about some of my latest articles below. For more details on how this blog is put together, refer to the [first blog post]({{< ref "posts" >}}).
