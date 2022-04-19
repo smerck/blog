@@ -1,4 +1,4 @@
-[submodule "hugo/smerc-dev-blog/themes/congo"]
-	path = hugo/smerc-dev-blog/themes/congo
+[submodule "hugo/themes/congo"]
+	path = hugo/themes/congo
 	url = https://github.com/jpanther/congo.git
 	branch = stable
