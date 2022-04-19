@@ -17,5 +17,5 @@ dateFormat = "2 January 2006"
   headline = "an engineer with the heart of an ogre"
   bio = "An engineer with a background in private & cloud infrastructure, and various associated topcis :), also an ogre"
   links = [
-    { twitter = "https://twitter.com/smercatoRex" }
+    { twitter = "https://twitter.com/smercDev" }
   ]
