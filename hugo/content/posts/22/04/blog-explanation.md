@@ -9,7 +9,7 @@ tags: ["first", "blog", "posts" ]
 
 # Hello, World!
 
-Hello! I’m [smerc](https://twitter.com/smercDev), an engineer with experience across a few different "areas" of software development. I’m always looking to try out new technologies and ways to grow personally & professionally. To that end, i’ve started this blog to document my progression, explain concepts, and improve my presentation & writing skills. Readers can expect a number of different topics from software development, cloud infrastructure, career insights, gaming, and other hobbies. Over time, i’ll likely narrow this down as I find an audience, but initially topics may be a bit varied.
+Hello! I’m [smerc](https://twitter.com/smercDev), an engineer with experience across a few different areas of software development. I’m always looking to try out new technologies and ways to grow personally & professionally. To that end, i’ve started this blog to document my progression, explain concepts, and improve my presentation & writing skills. Readers can expect a number of different topics from software development, cloud infrastructure, career insights, gaming, and other hobbies. Over time, i’ll likely narrow this down as I find an audience, but initially topics may be a bit varied.
 
 {{< lead >}}
 You either die a hero or live long enough to see yourself become the villain
@@ -19,7 +19,7 @@ You either die a hero or live long enough to see yourself become the villain
 
 Starting a blog is a weird & awkward thing for me. For years, I’ve laughed at _most_ (not all) people that have a tech blog. I used to view “tech bloggers” as people shilling the latest corporate IT jargon and marketing bullshit. In retrospect, it’s a bit judgemental to look at the writings over others and draw such a reductive conclusion, so I figured I’d give it a try myself. The goal here is to improve my overall understanding of different technologies and work on become a better communicator around those topics as well, starting with writing. Hopefully I can add in some clever memes along the way.
 
-# Ogrengineered blog
+# The Ogrengineered blog
 
 This blog is intended to be a easy-to-deploy service that I can run in a number of different places as needed. While initially, I'm currently running this blog as a container on [DigitalOcean App Platform](https://docs.digitalocean.com/products/app-platform/) for simplicity reasons, I aim to run this blog on different platforms (which is why this is run as a container rather than a static site even though it costs 5$/month) over time as my requirements change and I explore new technologies & platforms. Currently, this is created using Hugo as my static site generator and the digital ocean app is created/managed using Terraform. This is all guarded by some github actions to validate hugo works as expected, and that terraform output is within expectations. I’ll dig into more details around these individually below. For the purposes of brevity, this blog is intended to be more of an overview and explanation rather than a how-to for setting up your own blog (though the [source code is available](https://github.com/smerck/blog)).
 
@@ -93,9 +93,8 @@ When all github actions execute and complete successfully, the pull request can 
 
 I’m currently doing a lot of work focused around kubernetes & software development, so I intend to write about those exploits there. There are also some topics that I have a perspective on after having worked in the tech industry for 10+ years across multiple “verticals” (e.g. networking, private & public cloud infrastructure, SRE/reliability, developer advocacy, software development, DevOps). While there’s a fair amount of overlap between these (sometimes poorly defined) topics, I’ll dive more into these topics in future blog posts. If you have an interest in hearing from me on a particular topic, let me know (link to twitter)!
 
-* Kubernetes, cncf, etc
-* Envoy, service meshes, l4/l7 proxying
+* Kubernetes
+* Envoy, service meshes, l4/l7 proxying, networking things
 * Observability
-* DNS management
 * Local development with kubernetes, tilt, etc
 * Career thoughts after 10+ years // 10 things I wish I knew when I started
