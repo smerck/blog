@@ -1,14 +1,8 @@
 ---
-title: "Blog Posts"
-description: "See what smerc's up to"
+title: "The Ogrengineered Blog"
+description: "Ogrengineering at it's finest"
 
 cascade:
   showEdit: true
   showSummary: true
----
-
-{{< lead >}}
-The mad ramblings of an engineer
-{{< /lead >}}
-
 ---
