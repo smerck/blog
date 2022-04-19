@@ -44,9 +44,10 @@ That being said, this will likely take many forms over time and is intended to j
 
 [github.com/smerck/blog](https://github.com/smerck/blog) has all of the configuration for this blog, and i’ll point you to a few distinct part of the configuration of interest. I’ve set up main as a protected branch requiring me to open a pull request rather than pushing directly to the main branch. While this is “unnecessary” for me working on a solo project, I consider this to be good practice and it allows me to trigger some github actions for a branch on github before the pull request merges. I’ve added the associated configurations necessary for a public project on github:
 
-* [Branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule?source=post_page---------------------------) on main requiring PR, require passing status checks, require approval from me as a codeowner.
+* [Branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule) on main requiring PR, require passing status checks, require approval from me as a codeowner.
 * Github actions only trigger from branches I create currently. Again, this is totally expected in my solo project, but I wanted to specifically avoid having someone open a PR and trying to execute anything unexpected from a CI context, since CI may privileged/api access to certain tools. This is probably significant paranoia on my part for a _blog_, but it seemed valid.
 * Require Squash merging: I think it just makes it easier to understand exactly where changes are introduced and makes a less noisy main commit log.
+* [pre-commit configurations](https://github.com/smerck/blog/blob/main/.pre-commit-config.yaml) for convention-commit commit message checking & catching basic linting mistakes before code is committed
 
 Additionally, by putting some of these restrictions in place, i can prevent myself from doing dumb things that i’ll regret later and overall is a signficant improvement on the quality of the main commit log. Witness my atrocities (aka, my main branch):
 
@@ -86,8 +87,8 @@ For CI, I’ve added a few basic checks that do things like terraform validation
 
 When all github actions execute and complete successfully, the pull request can be merged.
 
-* If a terraform change is merged, a terraform apply will be executed.
-* Digital Ocean watches main for changes and deploys and update if needed.
+* If a terraform change is merged, a [terraform apply](https://github.com/smerck/blog/blob/main/.github/workflows/tf.yaml#L102-L104) will be executed.
+* Digital Ocean watches main for changes and deploys an update to the existing Digital Ocean App deployment.
 
 # Upcoming
 
